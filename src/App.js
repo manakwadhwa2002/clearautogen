@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import QRCode from "qrcode.react";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import DataPdf from "./DataPdf";
 
 const QRTableGenerator = () => {
   const [qrData, setQRData] = useState("");
@@ -11,6 +12,15 @@ const QRTableGenerator = () => {
   const [partnerpagelink, setPpl] = useState("");
   const [ctpocemail, setMyEmail] = useState("");
   const [ctpocphone, setMyPhone] = useState("");
+  const myProps = {
+    qrData: qrData,
+    companyname: companyname,
+    coupon: coupon,
+    source: source,
+    partnerpagelink: partnerpagelink,
+    ctpocemail: ctpocemail,
+    ctpocphone: ctpocphone,
+  };
 
   const handleCNChange = (event) => {
     setCompany(event.target.value);
@@ -773,21 +783,6 @@ const QRTableGenerator = () => {
     return htmlContent;
   };
 
-  const downloadPDFFile = () => {
-    const htmlContent = generateHTML(); // Assuming generateHTML() returns HTML content as a string
-
-    // Create a temporary div element and set its innerHTML to the HTML content
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = htmlContent;
-
-    // Pass the temporary div to html2canvas for rendering
-    html2canvas(tempDiv).then((canvas) => {
-      const imgData = canvas.toDataURL("image/jpeg");
-      const pdf = new jsPDF();
-      pdf.addImage(imgData, "JPEG", 0, 0);
-      pdf.save("download.pdf");
-    });
-  };
   // Function to download HTML file
   const downloadHTMLFile = () => {
     const htmlContent = generateHTML();
@@ -810,8 +805,8 @@ const QRTableGenerator = () => {
       <input value={ctpocemail} onChange={handleEmailChange} type="email" placeholder="Your Email" />
       <input value={ctpocphone} onChange={handlePhoneChange} type="number" placeholder="Your Phone (max len 10)" />
       <button onClick={downloadHTMLFile}>Download HTML</button>
-      <button onClick={downloadPDFFile}>Download PDF</button>
       <QRCode value={qrData} />
+      <DataPdf {...myProps} />
     </div>
   );
 };
