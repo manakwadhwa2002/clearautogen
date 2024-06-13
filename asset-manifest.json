@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/clearautogen/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/clearautogen/static/js/main.25be7ffd.chunk.js",
+    "main.js.map": "/clearautogen/static/js/main.25be7ffd.chunk.js.map",
+    "runtime-main.js": "/clearautogen/static/js/runtime-main.b4b9abfa.js",
+    "runtime-main.js.map": "/clearautogen/static/js/runtime-main.b4b9abfa.js.map",
+    "static/js/2.2b9d955b.chunk.js": "/clearautogen/static/js/2.2b9d955b.chunk.js",
+    "static/js/2.2b9d955b.chunk.js.map": "/clearautogen/static/js/2.2b9d955b.chunk.js.map",
+    "static/js/3.4a569aee.chunk.js": "/clearautogen/static/js/3.4a569aee.chunk.js",
+    "static/js/3.4a569aee.chunk.js.map": "/clearautogen/static/js/3.4a569aee.chunk.js.map",
+    "static/js/4.5f07cbe4.chunk.js": "/clearautogen/static/js/4.5f07cbe4.chunk.js",
+    "static/js/4.5f07cbe4.chunk.js.map": "/clearautogen/static/js/4.5f07cbe4.chunk.js.map",
+    "static/js/5.38bb039b.chunk.js": "/clearautogen/static/js/5.38bb039b.chunk.js",
+    "static/js/5.38bb039b.chunk.js.map": "/clearautogen/static/js/5.38bb039b.chunk.js.map",
+    "index.html": "/clearautogen/index.html",
+    "precache-manifest.3f165021b242a410022dcf72c3ac207c.js": "/clearautogen/precache-manifest.3f165021b242a410022dcf72c3ac207c.js",
+    "service-worker.js": "/clearautogen/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/clearautogen/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.2b9d955b.chunk.js.LICENSE.txt": "/clearautogen/static/js/2.2b9d955b.chunk.js.LICENSE.txt",
+    "static/js/3.4a569aee.chunk.js.LICENSE.txt": "/clearautogen/static/js/3.4a569aee.chunk.js.LICENSE.txt",
+    "static/js/4.5f07cbe4.chunk.js.LICENSE.txt": "/clearautogen/static/js/4.5f07cbe4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4b9abfa.js",
+    "static/js/3.4a569aee.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.25be7ffd.chunk.js"
+  ]
+}
