@@ -10,7 +10,7 @@ export default function CaPlans(props) {
     const element = document.getElementById("contentToCA");
     const opt = {
       margin: 0,
-      filename: `${companyname}.pdf`,
+      filename: `${companyname}_CA_Plan.pdf`,
       image: { type: "jpeg", quality: 1 }, // Adjust image quality
       html2canvas: { scale: 1.5 }, // Adjust scale to fit content onto one page
       jsPDF: { unit: "px", format: [795, 1042], orientation: "portrait" },
