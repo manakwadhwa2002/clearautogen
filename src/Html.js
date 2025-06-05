@@ -3,8 +3,6 @@ import QRCode from "qrcode.react";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import DataPdf from "./DataPdf";
-// import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import CaPlans from "./CaPlans";
 
 const QRTableGenerator = () => {
   const [qrData, setQRData] = useState("");
@@ -14,7 +12,6 @@ const QRTableGenerator = () => {
   const [partnerpagelink, setPpl] = useState("");
   const [ctpocemail, setMyEmail] = useState("");
   const [ctpocphone, setMyPhone] = useState("");
-  const [ctsuppemail, setSuppEmail] = useState("");
   const myProps = {
     qrData: qrData,
     companyname: companyname,
@@ -23,7 +20,6 @@ const QRTableGenerator = () => {
     partnerpagelink: partnerpagelink,
     ctpocemail: ctpocemail,
     ctpocphone: ctpocphone,
-    ctsuppemail: ctsuppemail,
   };
 
   const handleCNChange = (event) => {
@@ -34,20 +30,17 @@ const QRTableGenerator = () => {
   };
   const handleSourceChange = (event) => {
     setSource(event.target.value);
-    setQRData(`${partnerpagelink}?utm_source=${event.target.value}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign`);
+    setQRData(`${event.target.value}?utm_source=${event.target.value}&amp;utm_medium=email&amp;utm_campaign=itr_2024_corp_partnership_campaign`);
   };
   const handlePplChange = (event) => {
     setPpl(event.target.value);
-    setQRData(`${event.target.value}?utm_source=${source}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign`);
+    setQRData(`${event.target.value}?utm_source=${source}&amp;utm_medium=email&amp;utm_campaign=itr_2024_corp_partnership_campaign`);
   };
   const handleEmailChange = (event) => {
     setMyEmail(event.target.value);
   };
   const handlePhoneChange = (event) => {
     setMyPhone(event.target.value);
-  };
-  const handleSupportEmailChange = (event) => {
-    setSuppEmail(event.target.value);
   };
   // Function to generate HTML table
   const generateHTML = () => {
@@ -493,7 +486,7 @@ const QRTableGenerator = () => {
     						<table bgcolor="#ffffff" cellpadding="0" cellspacing="0" class="inner-table" width="100%">
     							<tbody>
     								<tr>
-    									<td align="center" style="padding: 0px 0% 0px 0%"><a href="${partnerpagelink}?utm_source=${source}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign"><img alt="" src="https://cleartax-media.s3.amazonaws.com/finfo/wg-utils/emailers/97a0410f-b6f7-44bd-9988-f96f5374755a.png" style="width: 100%;" /></a></td>
+    									<td align="center" style="padding: 0px 0% 0px 0%"><a href="${partnerpagelink}?utm_source=${source}&amp;utm_medium=email&amp;utm_campaign=itr_2024_corp_partnership_campaign"><img alt="" src="https://cleartax-media.s3.amazonaws.com/finfo/wg-utils/emailers/97a0410f-b6f7-44bd-9988-f96f5374755a.png" style="width: 100%;" /></a></td>
     								</tr>
     								<tr>
     									<td style="
@@ -506,17 +499,17 @@ const QRTableGenerator = () => {
                                               ">
     									<div style="text-align: center;"><strong>Let ClearTax take care of your tax woes<br />
     									<br />
-    									Say hi to stress-free tax filing & enjoy exclusive&nbsp;discount</strong></div>
+    									Say hi to stress-free tax filing &amp; enjoy exclusive&nbsp;discount</strong></div>
     									</td>
     								</tr>
     								<tr>
-    									<td align="center" style="padding: 20px 5% 10px 5%;font-family: Helvetica, Verdana,  sans-serif;"><a href="${partnerpagelink}?utm_source=${source}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign"><img alt="" src="https://cleartax-media.s3.amazonaws.com/finfo/wg-utils/emailers/284bc87a-d397-4059-82c9-03b3accd7be8.PNG" style="width: 410px; height: 72px;" /></a><br />
+    									<td align="center" style="padding: 20px 5% 10px 5%;font-family: Helvetica, Verdana,  sans-serif;"><a href="${partnerpagelink}?utm_source=${source}&amp;utm_medium=email&amp;utm_campaign=itr_2024_corp_partnership_campaign"><img alt="" src="https://cleartax-media.s3.amazonaws.com/finfo/wg-utils/emailers/284bc87a-d397-4059-82c9-03b3accd7be8.PNG" style="width: 410px; height: 72px;" /></a><br />
     									<br />
     									&nbsp;
     									<table border="0" cellpadding="0" cellspacing="0">
     										<tbody>
     											<tr>
-    												<td align="center" bgcolor="#1b368f" style="-webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"><a href="${partnerpagelink}?utm_source=${source}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign" style="font-size: 14px; font-family: Helvetica, Verdana, sans-serif;background-color:#1478fa; color: #ffffff; text-decoration: none; text-decoration: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; padding: 12px 30px; display: inline-block;font-weight: 600;" target="_blank">File Now</a></td>
+    												<td align="center" bgcolor="#1b368f" style="-webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"><a href="${partnerpagelink}?utm_source=${source}&amp;utm_medium=email&amp;utm_campaign=itr_2024_corp_partnership_campaign" style="font-size: 14px; font-family: Helvetica, Verdana, sans-serif;background-color:#1478fa; color: #ffffff; text-decoration: none; text-decoration: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; padding: 12px 30px; display: inline-block;font-weight: 600;" target="_blank">File Now</a></td>
     											</tr>
     										</tbody>
     									</table>
@@ -556,7 +549,7 @@ const QRTableGenerator = () => {
     									</td>
     								</tr>
     								<tr>
-    									<td align="center" style="padding: 20px 5% 10px 5%;font-family: Helvetica, Verdana,  sans-serif;"><a href="${partnerpagelink}?utm_source=${source}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign"><img alt="" src="https://cleartax-media.s3.amazonaws.com/finfo/wg-utils/emailers/785746a1-79f6-40d1-9606-8caca5301f13.PNG" style="width: 136px; height: 34px;" /></a><br />
+    									<td align="center" style="padding: 20px 5% 10px 5%;font-family: Helvetica, Verdana,  sans-serif;"><a href="${partnerpagelink}?utm_source=${source}&amp;utm_medium=email&amp;utm_campaign=itr_2024_corp_partnership_campaign"><img alt="" src="https://cleartax-media.s3.amazonaws.com/finfo/wg-utils/emailers/785746a1-79f6-40d1-9606-8caca5301f13.PNG" style="width: 136px; height: 34px;" /></a><br />
     									<br />
     									&nbsp;
     									<p><strong>Scan here to claim your reward :</strong><br />
@@ -573,7 +566,7 @@ const QRTableGenerator = () => {
 
     									<p style="text-align: center;">${ctpocemail}: +91-${ctpocphone}<br />
     									<br />
-    									${ctsuppemail}&nbsp;</p>
+    									corpsupport1@clear.in&nbsp;</p>
     									</td>
     								</tr>
     								<tr>
@@ -602,7 +595,7 @@ const QRTableGenerator = () => {
     																					<div class="footer-logo-new" style="
                                                                     text-align: center;
                                                                     padding: 15px 0px;
-                                                                  "><a href="${partnerpagelink}?utm_source=${source}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign" target="_blank"><img alt="Hurray! We are now LIVE with tax-filing" src="https://assets.clear.in/cleartax/images/1689695675_logocleartax.png" style="width: 130px;" /> </a></div>
+                                                                  "><a href="${partnerpagelink}?utm_source=${source}&amp;utm_medium=email&amp;utm_campaign=itr_2024_corp_partnership_campaign" target="_blank"><img alt="Hurray! We are now LIVE with tax-filing" src="https://assets.clear.in/cleartax/images/1689695675_logocleartax.png" style="width: 130px;" /> </a></div>
     																					</td>
     																				</tr>
     																				<tr>
@@ -743,7 +736,7 @@ const QRTableGenerator = () => {
     																					</td>
     																				</tr>
     																				<tr>
-    																					<td class="footer-keyword">Built for all kinds of income &lt;3- Salaried Employees | Mutual Funds & Stocks Investors | Crypto Investors | NRIs | Foreign Income | Freelancers | Business owners | ESOPs | RSUs</td>
+    																					<td class="footer-keyword">Built for all kinds of income &lt;3- Salaried Employees | Mutual Funds &amp; Stocks Investors | Crypto Investors | NRIs | Foreign Income | Freelancers | Business owners | ESOPs | RSUs</td>
     																				</tr>
     																				<tr>
     																					<td style="
@@ -811,16 +804,9 @@ const QRTableGenerator = () => {
       <input value={partnerpagelink} onChange={handlePplChange} type="text" placeholder="Partnerpage Link" />
       <input value={ctpocemail} onChange={handleEmailChange} type="email" placeholder="Your Email" />
       <input value={ctpocphone} onChange={handlePhoneChange} type="number" placeholder="Your Phone (max len 10)" />
-      {/* <input value={ctsuppemail} onChange={handleSupportEmailChange} type="text" placeholder="Corp Support Email" /> */}
-      {/* <button onClick={downloadHTMLFile}>Download HTML</button> */}
+      <button onClick={downloadHTMLFile}>Download HTML</button>
       <QRCode value={qrData} />
-      {/* <DataPdf {...myProps} /> */}
-      <CaPlans {...myProps} />
-      {/* <Router>
-        <Routes>
-          <Route path="/caplans" element={<CaPlans {...myProps} />} />
-        </Routes>
-      </Router> */}
+      <DataPdf {...myProps} />
     </div>
   );
 };
