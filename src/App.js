@@ -30,15 +30,15 @@ const QRTableGenerator = () => {
     setCompany(event.target.value);
   };
   const handleCouponChange = (event) => {
-    setCoupon(event.target.value);
+    setCoupon(event.target.value.toUpperCase());
   };
   const handleSourceChange = (event) => {
     setSource(event.target.value);
-    setQRData(`${partnerpagelink}?utm_source=${event.target.value}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign`);
+    setQRData(`${partnerpagelink}?utm_source=${event.target.value}&utm_medium=email&utm_campaign=itr_2025_corp_partnership_campaign`);
   };
   const handlePplChange = (event) => {
     setPpl(event.target.value);
-    setQRData(`${event.target.value}?utm_source=${source}&utm_medium=email&utm_campaign=itr_2024_corp_partnership_campaign`);
+    setQRData(`${event.target.value}?utm_source=${source}&utm_medium=email&utm_campaign=itr_2025_corp_partnership_campaign`);
   };
   const handleEmailChange = (event) => {
     setMyEmail(event.target.value);

@@ -84,6 +84,14 @@ export default function CaPlans(props) {
                   </a>
                 </td>
               </tr>
+              <tr>
+                <td>Luxury Plan</td>
+                <td>
+                  <a href={`https://cleartax.in/checkout/prod_itr_af_luxury?coupon=${coupon}&utm_source=${source}&utm_medium=email&utm_campaign=itr_2025_corp_partnership_campaign`} target="_blank">
+                    Link
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
